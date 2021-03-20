@@ -1,3 +1,6 @@
+/**
+ *  Event-Driven Architecture (EDA)
+ */
 const data = require('../dataLogic/base')
 const {exception} = require('../response/exception');
 const _ = require('lodash');

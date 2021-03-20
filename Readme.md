@@ -19,7 +19,7 @@ npm run start
 
 * [nodeJS](https://nodejs.org/es/) - NodeJS
 * [React](https://es.reactjs.org/) - React V 17.0.1
-* [webpack] (https://webpack.js.org/) - Webpack
+* [Webpack](https://webpack.js.org/) - Webpack
 * [npm](https://docs.npmjs.com/) -  Manejador de dependencias
 
 
