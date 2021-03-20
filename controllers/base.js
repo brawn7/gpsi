@@ -5,9 +5,8 @@ const validator = require('validator').default;
 
 async function welcomeInit (req,res) {
   try {
-    let { user } = req.query
-    const result = await data.welcomInit(user);
-    res.status(200).json(result);
+    const result = await data.welcomInit();
+    res.status(200).json({result});
   } catch(error){
     const {code,body} = exception(error)
     res.status(code).json(body)

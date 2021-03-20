@@ -1,20 +1,15 @@
 // const dbjson = require('')
 const dbj = require('../Lib/db.json')
 
-function welcomInit ( user ) {
-  let userg = user.charAt(user.length - 1);
-  let candidat = 'candidato '
-  if(userg == 'a'){
-    candidat = 'candidata ';
-  }
-  let msgWelcome = ' “Bienvenido '.concat(candidat,user);
-  return msgWelcome
+async function welcomInit ( user ) {
+  let msgWelcome = 'Bienvenido Candidato 01';
+  return await msgWelcome
 }
-function aVendors () {
+async function aVendors () {
   const allVendors = dbj.vendors
-  return allVendors;
+  return await allVendors;
 }
-function vendorId (id) {
+async function vendorId (id) {
   let oVendor = dbj.vendors
   let vendors = oVendor.length
   if(id>vendors){
@@ -25,7 +20,7 @@ function vendorId (id) {
       oVendor = item
     }
   })
-  return oVendor;
+  return await oVendor;
 }
 async function saveVendor (parameters) {
   let nombre = parameters.nombre;
@@ -40,7 +35,7 @@ async function saveVendor (parameters) {
   parameters['id'] = keys;
   oVendor.push(parameters)
   
-  return parameters;
+  return await parameters;
 }
 async function deleteVendor (id) {
   let dVendor = dbj.vendors
@@ -49,7 +44,7 @@ async function deleteVendor (id) {
       delete dVendor[(item.id)-1];
     }
   })
-  return dVendor
+  return await dVendor
 }
 module.exports = {
   welcomInit,aVendors,vendorId,saveVendor,deleteVendor
