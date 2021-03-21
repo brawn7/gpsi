@@ -9,7 +9,7 @@ const validator = require('validator').default;
 async function welcomeInit (req,res) {
   try {
     const result = await data.welcomInit();
-    res.status(200).json({result});
+    res.status(200).json(result);
   } catch(error){
     const {code,body} = exception(error)
     res.status(code).json(body)
@@ -41,10 +41,10 @@ async function oneVendor (req,res) {
 async function addVendor (req,res) {
   try {
     const validFields = [
-      "nombre", "razonSocial", "direccion", "email", "telefono", "estatus"
+      "nombre", "razonSocial", "direccion", "email", "telefono"
     ]
     let parameters = _.pick(req.body,validFields);
-    if(Object.keys(parameters).length < 6){
+    if(Object.keys(parameters).length < 5){
       throw 0;
     }
     const result = await data.saveVendor(parameters);

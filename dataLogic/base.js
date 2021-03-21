@@ -3,7 +3,11 @@ const dbj = require('../Lib/db.json')
 
 async function welcomInit ( user ) {
   let msgWelcome = 'Bienvenido Candidato 01';
-  return await msgWelcome
+  let versionMsg = 'versión 0.0.1'
+
+  const wMessage = { msgWelcome, versionMsg}
+
+  return await wMessage
 }
 async function aVendors () {
   const allVendors = dbj.vendors
@@ -33,6 +37,7 @@ async function saveVendor (parameters) {
   })
   let keys = ((Object.keys(oVendor).length) + 1)
   parameters['id'] = keys;
+  parameters['estatus'] = true;
   oVendor.push(parameters)
   
   return await parameters;
