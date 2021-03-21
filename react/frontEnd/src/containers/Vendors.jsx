@@ -12,13 +12,11 @@ const Vendor = (props) => {
   const initialState = useInitialState(API);
   return initialState.length === 0 ? <h3>Loading</h3> : (
     <>
-      <Header />
-        <Table title="Proveedores">
-          {initialState.map(item =>
-            <TableItem key={item.id} {...item}/>
-          )}
-        </Table>
-      <Footer />
+      <Table title="Proveedores">
+        {initialState.map(item =>
+          <TableItem key={item.id} {...item}/>
+        )}
+      </Table>
     </>
   );
 };

@@ -1,6 +1,5 @@
 import React from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer.jsx';
+import { Link } from 'react-router-dom';
 import useInitialState from '../hooks/useInitialState';
 import Profile from '../assets/static/logoBlanco.png';
 import '../assets/styles/App.scss'
@@ -11,7 +10,6 @@ const Home = () => {
   const initialState = useInitialState(API);
   return initialState.length === 0 ? <h3>Loading</h3> : (
     <>
-      <Header />
       <div className="container">
         <div className="card text-center">
           <div className="card-header">
@@ -23,7 +21,7 @@ const Home = () => {
               <img src={Profile} className="rounded-circle" alt="logo principal" />
             </div>
             <p className="card-text">{initialState.msgWelcome}</p>
-            <a href="vendors" className="btn btn-cont">Continuar</a>
+            <Link to="/vendors" className="btn btn-cont">Continuar</Link>
           </div>
           <div className="card-footer">
             <div className="shadow-sm p-1 mb-2 bg-body rounded foo">
@@ -32,7 +30,6 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 };
