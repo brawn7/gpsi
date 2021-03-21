@@ -1,3 +1,6 @@
+/**
+ * Patron de diseño: Componentes y Contenedores de Presentación y Composición
+ */
 import React, { useState } from 'react';
 
 import '../assets/styles/components/Table.scss';

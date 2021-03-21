@@ -1,4 +1,6 @@
-// const dbjson = require('')
+/**
+ *  Arquitectura: Event-Driven Architecture (EDA)
+ */
 const dbj = require('../Lib/db.json')
 
 async function welcomInit ( user ) {

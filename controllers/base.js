@@ -1,5 +1,5 @@
 /**
- *  Event-Driven Architecture (EDA)
+ *  Arquitectura: Event-Driven Architecture (EDA)
  */
 const data = require('../dataLogic/base')
 const {exception} = require('../response/exception');

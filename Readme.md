@@ -7,11 +7,11 @@ _Para instalar dependencias ejecutar lo siguiente en la ruta principal ./ y en l
 npm i
 ```
 ### Ejecutar 🔧
-_Para probar de forma local el servidor ejecutar lo siguiente en la ruta principal ./:_
+_Para iniciar de forma local el servidor ejecutar lo siguiente en la ruta principal ./:_
 ```
 npm run dev
 ```
-_Para probar de forma local el frontend ejecutar lo siguiente en la ruta ./react/frontEnd:_
+_Para iniciar de forma local el frontend ejecutar lo siguiente en la ruta ./react/frontEnd:_
 ```
 npm run start
 ```

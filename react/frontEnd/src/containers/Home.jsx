@@ -1,3 +1,6 @@
+/**
+ * Patron de diseño: Atributos de propagación
+ */
 import React from 'react';
 import { Link } from 'react-router-dom';
 import useInitialState from '../hooks/useInitialState';
