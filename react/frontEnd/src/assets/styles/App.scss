@@ -1,42 +1,51 @@
 @import './Variables.scss';
 
 body {
+  margin: 0;
   background-color: $main-color;
-  font-family: $theme-font;
+}
+
+* {
+  box-sizing: border-box;
 }
 .container {
   display: flex;
   align-items: center;
   justify-content: center;
   padding-top: 55px;
+  padding-bottom: 55px;
 }
 
 .card {
-  border: 0.5px outset $card-color;
+  border: 0.5px outset card-color;
+  color: white;
+  font-weight: bold;
 }
 
 .card-body {
   text-align: center;
   width: 450px;
   padding: 60px;
-  background-color: $main-color;
+  background-color: white;
+  background-image: linear-gradient(#36a5d1 40%, white);
+
 }
 .card-header{
   display: flex;
   align-items: center;
   justify-content: space-between;
   border-bottom: 0px solid rgba(0,0,0,.125);
-  background-color: #d1d1d1;
+  background-color: #36a5d1;
 }
 .card-text{
-  padding: 15px
+  padding: 15px;
 }
 
 .btn-perso {
   border-radius: 50%;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
-  background-color: rgb(192, 192, 192);
+  background-color: #1694c5;
 }
 .cimg {
   align-items: center;
@@ -55,13 +64,14 @@ body {
 }
 
 .btn-cont {
-  background-color: $btn-principal;
+  background-color: #0088cc;
   color: #fff;
 }
 
 .card-footer {
-  background-color: $main-color;
+  background-color: white;
   border-top: 0px solid rgba(0,0,0,.125);
+  color: black;
 }
 
 .foo {

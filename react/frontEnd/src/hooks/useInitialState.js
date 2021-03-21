@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
 
 const useInitialState = (API) => {
-  const [list, setList] = useState({ listTable: [] });
+  const [list, setList ] = useState([]);
   useEffect(() => {
     fetch(API)
-      .then((response) => response.json())
-      .then((data) => setList(data));
+      .then(response => response.json())
+      .then(data => setList(data));
   }, []);
   return list;
 };

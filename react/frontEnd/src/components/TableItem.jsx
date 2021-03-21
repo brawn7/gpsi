@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TableItem = ({ id,nombre,razonSocial,direccion,email,telefono,estatus }) => {
+const TableItem = ({ id,nombre,razonSocial,direccion,email,telefono,estatus }) => (
   <tr>
     <th scope="row">{id}</th>
     <td>{nombre}</td>
@@ -8,8 +8,8 @@ const TableItem = ({ id,nombre,razonSocial,direccion,email,telefono,estatus }) =
     <td>{direccion}</td>
     <td>{email}</td>
     <td>{telefono}</td>
-    <td>{estatus}</td>
+    <td>{(estatus) ? 'Activo' : 'Baja'}</td>
   </tr>
-}
+)
 
 export default TableItem;
