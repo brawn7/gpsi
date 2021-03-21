@@ -1,20 +1,19 @@
-import React from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer.jsx';
+import React, { setState } from 'react';
 import Table from '../components/Table';
-import TableItem from '../components/TableItem';
+import RowItem from '../components/RowItem';
 import useInitialState from '../hooks/useInitialState';
+import useChangeState from '../hooks/useChangeState';
 import '../assets/styles/App.scss'
 
-const API = 'http://localhost:3010/vendors'
+const api = 'http://localhost:3010/vendors';
 
-const Vendor = (props) => {
-  const initialState = useInitialState(API);
-  return initialState.length === 0 ? <h3>Loading</h3> : (
+const Vendor = () => {
+  const initialState = useInitialState(api);
+  return (
     <>
       <Table title="Proveedores">
         {initialState.map(item =>
-          <TableItem key={item.id} {...item}/>
+          <RowItem key={item.id} {...item}/>
         )}
       </Table>
     </>
